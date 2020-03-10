@@ -16,7 +16,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script>
 	$(function(){
-		$('a[href^=#]').click(function() {
+		$('a[href^="#"]').click(function() {
 			var speed = 400;
 			var href = $(this).attr("href");
 			var target = $(href == "#" || href == "" ? 'html' : href);
