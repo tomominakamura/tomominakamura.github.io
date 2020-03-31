@@ -14,18 +14,7 @@
 
 <!--jQueryでスムーズスクロール-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script>
-	$(function(){
-		$('a[href^="#"]').click(function() {
-			var speed = 400;
-			var href = $(this).attr("href");
-			var target = $(href == "#" || href == "" ? 'html' : href);
-			var position = target.offset().top;
-			$('html, body').animate({scrollTop:position}, speed, 'swing');
-			return false;
-		});
-	});
-</script>
+<script src="js/jsscroll.js"></script>
 
 </head>
 
@@ -34,39 +23,43 @@
 
 <div id="container">
 
-	<!-- タイトル -->
-	<header class="clearfix">
+	<!-- タイトルとメニュー -->
+	<header>
+		<div class="clearfix">
 		<h1>
 			<div class="icons">
-				<a href="https://orcid.org/0000-0001-8639-7341"><img src="images/ORCIDiD_icon64x64.png" width="25" alt="GitHub" /></a>　<a href="https://www.facebook.com/tomomi.nakamura220"><img src="images/f_logo_RGB-Blue_114.png" width="25" alt="facebook" /></a>
+				<a href="https://orcid.org/0000-0001-8639-7341"><img src="images/ORCIDiD_icon64x64.png" width="25" alt="GitHub" /></a>
+				<a href="https://www.facebook.com/tomomi.nakamura220"><img src="images/f_logo_RGB-Blue_114.png" width="25" alt="facebook" /></a>
 			</div>
 
 			<div class="pic">
-				<img src="images/Hawking.png" width="400" alt="" />
+				<img src="images/Hawking.png" alt="" />
 			</div>
 		</h1>
+		</div>
+
+		<div class="title">
+			<h1>Tomomi Nakamura</h1>
+			<p>
+				車いすの数物系大学院生
+			</p>
+		</div>
+
+		<!-- メニュー -->
+		<nav>
+			<ul class="fixbar">
+				<li><a href="#" class="s0">Home</a></li>
+				<li><a href="#sec1" class="s1">Profile</a></li>
+				<li><a href="#sec2" class="s2">Activities</a></li>
+				<li><a href="#sec3" class="s3">Contact</a></li>
+			</ul>
+		</nav>
+
 	</header>
-
-	<div id="title">
-		<h1>Tomomi Nakamura</h1>
-		<p>
-			車いすの数物系大学院生
-		</p>
-	</div>
-
-	<!-- メニュー -->
-	<nav>
-		<ul>
-			<li><a href="#" class="current">Home</a></li>
-			<li><a href="#profile">Profile</a></li>
-			<li><a href="#activities">Activities</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-	</nav>
 
 
 <!-- 本文 -->
-<div id="main">
+<div class="main">
 
 	<section>
 		<p>こんにちは！茨城大学大学院 理工学研究科 博士後期課程の中村文美（なかむらともみ）です。主に、情報幾何学や非平衡統計力学などを学び、研究しています。SMA（脊髄性筋萎縮症）II型という先天性の難病のため、普段から電動車いすに乗っています。ご連絡は、18nd209r (at) vc.ibaraki.ac.jp までいただだけましたら幸いです。</p>
@@ -96,7 +89,7 @@
 	</section>
 
 	<section>
-		<h2><a id="profile">Profile</a></h2>
+		<h2><a id="sec1">Profile</a></h2>
 
 		<ul class="profile1">
 			<li class="profile1_list">所属</li>
@@ -128,7 +121,7 @@
 	</section>
 
 	<section>
-		<h2><a id="activities">Activities</a></h2>
+		<h2><a id="sec2">Activities</a></h2>
 
 		<ul class="profile1">
 			<li class="profile1_list">学術論文</li>
@@ -160,7 +153,7 @@
 	</section>
 
 	<section>
-		<h2><a id="contact">Contact</a></h2>
+		<h2><a id="sec3">Contact</a></h2>
 		<div id="contact2">
 			<p>中村 文美 (なかむら ともみ)</p>
 			<ul class="profile2">
